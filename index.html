@@ -8,18 +8,21 @@
 <title>Shopping List</title>
 </head>
 <body ng-app="shopModule" ng-controller="mainController">
-  <div id="listwrapper">
+  <div id="mainWrapper">
 
-    <form id="inputwrapper">
-      <input id="itemin" ng-model="itemin" placeholder="Item Name"/>&nbsp;
-      <input id="pricein" ng-model="itemprice" placeholder="Item Price"/>
-      <button id="additem" ng-click="thebutton(itemin, itemprice)">Add to List</button>
+    <form id="addItemWrapper">
+      <input id="nameIn" ng-model="nameIn" placeholder="Item Name"/>&nbsp;
+      <input id="priceIn" ng-model="priceIn" placeholder="Item Price"/>
+      <button id="addItem" ng-click="addItem()">Add to List</button>
+      <input id="searchBar" ng-model="searchBar" placeholder="Search Your List"/>
     </form>
 
-    <div ng-repeat="entry in list" class="eachentry">
-      <div class="itemname">{{entry.name}}</div>
-      <div class="itemprice">{{entry.price | currency}}</div>
+    <div ng-repeat="perItem in itemList | filter: searchBar | orderBy: 'name'" class="eachItem">
+      <div class="listName">{{perItem.name}}</div>
+      <div class="listPrice">{{perItem.price | currency}}</div>
     </div>
+
+    <div id="showTotal"><span class="bigL">Total:</span>{{total | currency}}</h2>
 
   </div>
 </body>
