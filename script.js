@@ -23,12 +23,14 @@ shopApp.controller('mainController', function($scope) {
   };
   $scope.getTotal();
   $scope.addItem = function() {
-    if ((nameIn && priceIn) !== (undefined)) { // If user passes data
+    if (($scope.nameIn && $scope.priceIn) !== (undefined)) { // If user passes data
       $scope.itemList.push({
         name: $scope.nameIn,
         price: $scope.priceIn
       });
       $scope.getTotal();
+      $scope.nameIn = "";
+      $scope.priceIn = "";
     } else { // If user submites with either field blank
       alert("Oops, looks like you left something blank.")
     }

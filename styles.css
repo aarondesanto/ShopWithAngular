@@ -14,12 +14,13 @@ html {
   margin-bottom: 5%;
 }
 #nameIn, #priceIn, #searchBar {
-  width: 58%;
+  width: 50%;
   margin: 0;
   padding: 5px;
   border: 0;
 }
 #priceIn {
+  float: right;
   width: 36%;
 }
 #addItem {
@@ -32,6 +33,7 @@ html {
   background-color: rgba(255, 255, 255, 0.5);
 }
 #searchBar {
+  display: inline-block;
   width: 98%;
 }
 #showTotal {
@@ -61,4 +63,8 @@ html {
 .bigL {
   float: left;
   padding-left: 20%;
+}
+.bigR {
+  padding-top: 1%;
+  float: right;
 }

@@ -10,9 +10,10 @@
 <body ng-app="shopModule" ng-controller="mainController">
   <div id="mainWrapper">
 
-    <form id="addItemWrapper">
-      <input id="nameIn" ng-model="nameIn" placeholder="Item Name"/>&nbsp;
+    <form id="addItemWrapper" ng-model="addItemWrapper">
+      <input id="nameIn" ng-model="nameIn" placeholder="Item Name"/>
       <input id="priceIn" ng-model="priceIn" placeholder="Item Price"/>
+      <span class="bigR">$</span>
       <button id="addItem" ng-click="addItem()">Add to List</button>
       <input id="searchBar" ng-model="searchBar" placeholder="Search Your List"/>
     </form>
