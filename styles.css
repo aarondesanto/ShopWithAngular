@@ -1,0 +1,47 @@
+html {
+  font-family: cursive;
+  font-size: 14px;
+  color: #FFF;
+  background-color: #000;
+}
+#listwrapper {
+  width: 25%;
+  margin: 0 auto;
+}
+#inputwrapper {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#itemin, #pricein {
+  width: 58%;
+  margin: 0;
+  padding: 5px;
+  border: 0;
+}
+#pricein {
+  width: 36%;
+}
+#additem {
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 1%;
+  color: #FFF;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.eachentry {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 1%;
+}
+.itemname {
+  display: inline-block;
+  width: 60%;
+  font-size: 2em;
+}
+.itemprice {
+  display: inline-block;
+  width: 35%;
+  text-align: right;
+  font-size: 2em;
+}

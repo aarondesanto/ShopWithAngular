@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src='script.js'  type='text/javascript'></script>
+  <link href='styles.css' rel='stylesheet' type='text/css'>
+  <meta charset='utf-8'>
+<title>Shopping List</title>
+</head>
+<body ng-app="shopModule" ng-controller="mainController">
+  <div id="listwrapper">
+
+    <form id="inputwrapper">
+      <input id="itemin" ng-model="itemin" placeholder="Item Name"/>&nbsp;
+      <input id="pricein" ng-model="itemprice" placeholder="Item Price"/>
+      <button id="additem" ng-click="thebutton(itemin, itemprice)">Add to List</button>
+    </form>
+
+    <div ng-repeat="entry in list" class="eachentry">
+      <div class="itemname">{{entry.name}}</div>
+      <div class="itemprice">{{entry.price | currency}}</div>
+    </div>
+
+  </div>
+</body>
+</html>
